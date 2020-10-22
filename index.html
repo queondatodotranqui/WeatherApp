@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="#"> Weather App </a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="izquierda">
+            <div class="cajaTemperatura">
+                <div class="numero"> 
+                    <h2 id="numero">42.4°c</h2>
+                </div>
+                <div class="info">
+                    <div class="lugar">
+                        <h2 id="lugar"> Mar del Plata </h2>
+                    </div>
+                    <div class="fecha">
+                        <h2 id="dia"> Lunes </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="derecha">
+            <div class="selectores">
+                <select id="dias">  
+                    <option selected> Seleccione un dia...</option>
+                    <option value="0"> Lunes</option>
+                    <option value="1"> Martes</option>
+                    <option value="2"> Miercoles</option>
+                    <option value="3"> Jueves</option>
+                    <option value="4"> Viernes</option>
+                    <option value="5"> Sabado</option>
+                    <option value="6"> Domingo</option>
+                </select>
+                <select id="lugares">
+                    <option selected> Seleccione un lugar...</option>
+                    <option value="0"> Mar del Plata </option>
+                    <option value="1"> CABA</option>
+                    <option value="2"> Corrientes</option>
+                    <option value="3"> Bariloche</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> @ Derechos Reservados. BeraTiempos</div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
