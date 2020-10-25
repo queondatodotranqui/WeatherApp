@@ -1,6 +1,4 @@
 
-
-/*
 window.addEventListener('load', ()=>{
     let long;
     let lat;
@@ -26,6 +24,8 @@ window.addEventListener('load', ()=>{
                 
                 var tempCel = temperatureConverter(temp);
                 console.log(tempCel.toFixed(2));
+
+                document.getElementById('numero').innerHTML = tempCel.toFixed(2);                
             })
 
             function temperatureConverter(valNum) {
@@ -36,4 +36,3 @@ window.addEventListener('load', ()=>{
         });
     }
 })
-*/
