@@ -5,13 +5,28 @@ var lugares = ['Mar del Plata', 'CABA', 'Corrientes', 'Bariloche'];
 var selectorDias = document.getElementById('dias');
 var selectorLugar = document.getElementById('lugares');
 
+var dia = document.getElementById('dia');
+dia.innerHTML = 
+
 selectorDias.addEventListener('change', ()=>{
-    document.getElementById('dia').innerHTML = dias[selectorDias.selectedOptions[0].value];
+    dia.innerHTML = dias[selectorDias.selectedOptions[0].value];
 })
 
 selectorLugar.addEventListener('change', ()=>{
     document.getElementById('lugar').innerHTML = lugares[selectorLugar.selectedOptions[0].value];
 })
+
+
+var timestamp = Date.now();
+var a = new Date(timestamp*1000);
+var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var dayOfWeek = dias[a.getDay()]
+
+console.log(dayOfWeek);
+
+
+
+
 
 window.addEventListener('load', ()=>{
     let long;
@@ -22,9 +37,9 @@ window.addEventListener('load', ()=>{
             long = position.coords.longitude;
             lat = position.coords.latitude;
 
-            const key = 'ad5fd62fe26fee6134467fcefce7a6cf'
+            const key = '218a3479ecf608d72cb45674511aa25b'
             const proxy = 'https://cors-anywhere.herokuapp.com/'
-            let api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}`;
+            let api = `${proxy}api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=${alerts}&appid=${key}`;
 
             /*
             fetch(api)
