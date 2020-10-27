@@ -6,7 +6,6 @@ var selectorDias = document.getElementById('dias');
 var selectorLugar = document.getElementById('lugares');
 
 var dia = document.getElementById('dia');
-dia.innerHTML = 
 
 selectorDias.addEventListener('change', ()=>{
     dia.innerHTML = dias[selectorDias.selectedOptions[0].value];
@@ -19,10 +18,12 @@ selectorLugar.addEventListener('change', ()=>{
 
 var timestamp = Date.now();
 var a = new Date(timestamp*1000);
-var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-var dayOfWeek = dias[a.getDay()]
+var dayOfWeek = dias[a.getDay()];
 
 console.log(dayOfWeek);
+
+//console.log(date);
+//console.log(a);
 
 
 
@@ -31,6 +32,9 @@ console.log(dayOfWeek);
 window.addEventListener('load', ()=>{
     let long;
     let lat;
+    let alerts = 'alerts';
+
+    dia.innerHTML = dayOfWeek;
 
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(position => {
@@ -41,7 +45,6 @@ window.addEventListener('load', ()=>{
             const proxy = 'https://cors-anywhere.herokuapp.com/'
             let api = `${proxy}api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=${alerts}&appid=${key}`;
 
-            /*
             fetch(api)
             .then(response =>{
                 return response.json();
@@ -49,7 +52,7 @@ window.addEventListener('load', ()=>{
             .then(data =>{
                 console.log(data);
 
-                let {temp} = data.main;
+                let {temp} = data.current;
                 console.log(temp);
                 
                 var tempCel = temperatureConverter(temp);
@@ -57,7 +60,6 @@ window.addEventListener('load', ()=>{
 
                 document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';                
             })
-            */
             
 
             function temperatureConverter(valNum) {
