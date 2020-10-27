@@ -1,4 +1,18 @@
 
+var dias = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+var lugares = ['Mar del Plata', 'CABA', 'Corrientes', 'Bariloche'];
+
+var selectorDias = document.getElementById('dias');
+var selectorLugar = document.getElementById('lugares');
+
+selectorDias.addEventListener('change', ()=>{
+    document.getElementById('dia').innerHTML = dias[selectorDias.selectedOptions[0].value];
+})
+
+selectorLugar.addEventListener('change', ()=>{
+    document.getElementById('lugar').innerHTML = lugares[selectorLugar.selectedOptions[0].value];
+})
+
 window.addEventListener('load', ()=>{
     let long;
     let lat;
@@ -12,6 +26,7 @@ window.addEventListener('load', ()=>{
             const proxy = 'https://cors-anywhere.herokuapp.com/'
             let api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}`;
 
+            /*
             fetch(api)
             .then(response =>{
                 return response.json();
@@ -25,8 +40,10 @@ window.addEventListener('load', ()=>{
                 var tempCel = temperatureConverter(temp);
                 console.log(tempCel.toFixed(2));
 
-                document.getElementById('numero').innerHTML = tempCel.toFixed(2);                
+                document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';                
             })
+            */
+            
 
             function temperatureConverter(valNum) {
                 valNum = parseFloat(valNum);
