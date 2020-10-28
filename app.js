@@ -25,10 +25,27 @@ console.log(dayOfWeek);
 //console.log(date);
 //console.log(a);
 
+/*
+
+var times = [1603810800, 1603983600, 1604070000, 1604156400, 1604242800, 1604329200, 1604415600];       // array con timestamps de los dias
+
+window.addEventListener('load', ()=>{                       // muestra los dias del arreglo times
+    for(let i = 0; i < times.length; i++){
+        let b = new Date(times[i]*1000);
+        let day = dias[b.getDay()];
+        console.log(day);
+    }
+})
+
+*/
 
 
 
 
+
+
+
+/*
 window.addEventListener('load', ()=>{
     let long;
     let lat;
@@ -70,3 +87,4 @@ window.addEventListener('load', ()=>{
         });
     }
 })
+*/
