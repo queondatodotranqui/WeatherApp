@@ -67,8 +67,8 @@ window.addEventListener('load', ()=>{
             .then(data =>{
                 console.log(data);
 
-                let {temp} = data.daily;
-                let {dt} = data.daily;
+                let {temp} = data.current;
+                let {dt} = data.current;
                 console.log(temp);
 
                 currentDay(dt);
