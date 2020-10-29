@@ -64,7 +64,7 @@ window.addEventListener('load', ()=>{
             .then(data =>{
                 console.log(data);
 
-                var diaElegido = '';
+                var diaElegido = 0;
 
                 selectorDias.addEventListener('change', ()=>{
                     dia.innerHTML = dias[selectorDias.selectedOptions[0].value];
