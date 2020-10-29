@@ -15,7 +15,7 @@ selectorLugar.addEventListener('change', ()=>{
     document.getElementById('lugar').innerHTML = lugares[selectorLugar.selectedOptions[0].value];
 })
 
-var dayOfWeek = '';
+
 
 //console.log(date);
 //console.log(a);
@@ -35,10 +35,11 @@ window.addEventListener('load', ()=>{                       // muestra los dias 
 */
 
 function currentDay(dia){
+    var dayOfWeek = '';
     var timestamp = dia;
     var a = new Date(timestamp*1000);
     dayOfWeek = dias[a.getDay()];
-    dia.innerHTML = dayOfWeek;
+    return dayOfWeek;
 }
 
 
@@ -70,13 +71,12 @@ window.addEventListener('load', ()=>{
                 let {temp} = data.current;
                 let {dt} = data.current;
                 console.log(temp);
-
-                currentDay(dt);
                 
                 var tempCel = temperatureConverter(temp);
                 console.log(tempCel.toFixed(2));
 
-                document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';                
+                document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
+                dia.innerHTML = currentDay(dt);                
             })
             
 
