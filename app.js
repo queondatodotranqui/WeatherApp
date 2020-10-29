@@ -15,12 +15,7 @@ selectorLugar.addEventListener('change', ()=>{
     document.getElementById('lugar').innerHTML = lugares[selectorLugar.selectedOptions[0].value];
 })
 
-
-var timestamp = Date.now();
-var a = new Date(timestamp*1000);
-var dayOfWeek = dias[a.getDay()];
-
-console.log(dayOfWeek);
+var dayOfWeek = '';
 
 //console.log(date);
 //console.log(a);
@@ -39,19 +34,22 @@ window.addEventListener('load', ()=>{                       // muestra los dias 
 
 */
 
+function currentDay(dia){
+    var timestamp = dia;
+    var a = new Date(timestamp*1000);
+    dayOfWeek = dias[a.getDay()];
+    dia.innerHTML = dayOfWeek;
+}
 
 
 
 
 
 
-/*
 window.addEventListener('load', ()=>{
     let long;
     let lat;
     let alerts = 'alerts';
-
-    dia.innerHTML = dayOfWeek;
 
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(position => {
@@ -69,8 +67,10 @@ window.addEventListener('load', ()=>{
             .then(data =>{
                 console.log(data);
 
-                let {temp} = data.current;
+                let {temp} = data.daily[0];
                 console.log(temp);
+
+                currentDay(daily[0].dt);
                 
                 var tempCel = temperatureConverter(temp);
                 console.log(tempCel.toFixed(2));
@@ -87,4 +87,3 @@ window.addEventListener('load', ()=>{
         });
     }
 })
-*/
