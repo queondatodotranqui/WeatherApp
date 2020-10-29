@@ -68,15 +68,16 @@ window.addEventListener('load', ()=>{
             .then(data =>{
                 console.log(data);
 
-                let {temp} = data.current;
-                let {dt} = data.current;
-                console.log(temp);
+                let tempDaily = data.daily[0].temp.day;
+                let dateDaily = data.daily[0].dt;
+
+                console.log(tempDaily);
                 
-                var tempCel = temperatureConverter(temp);
+                var tempCel = temperatureConverter(tempDaily);
                 console.log(tempCel.toFixed(2));
 
                 document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
-                dia.innerHTML = currentDay(dt);                
+                dia.innerHTML = currentDay(dateDaily);                
             })
             
 
