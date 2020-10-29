@@ -7,10 +7,6 @@ var selectorLugar = document.getElementById('lugares');
 
 var dia = document.getElementById('dia');
 
-selectorDias.addEventListener('change', ()=>{
-    dia.innerHTML = dias[selectorDias.selectedOptions[0].value];
-})
-
 selectorLugar.addEventListener('change', ()=>{
     document.getElementById('lugar').innerHTML = lugares[selectorLugar.selectedOptions[0].value];
 })
@@ -68,8 +64,15 @@ window.addEventListener('load', ()=>{
             .then(data =>{
                 console.log(data);
 
-                let tempDaily = data.daily[0].temp.day;
-                let dateDaily = data.daily[0].dt;
+                var diaElegido = '';
+
+                selectorDias.addEventListener('change', ()=>{
+                    dia.innerHTML = dias[selectorDias.selectedOptions[0].value];
+                    diaElegido = selectorDias.selectedOptions[0].value;
+                })
+
+                let tempDaily = data.daily[diaElegido].temp.day;
+                let dateDaily = data.daily[diaElegido].dt;
 
                 console.log(tempDaily);
                 
