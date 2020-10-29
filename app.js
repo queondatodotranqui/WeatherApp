@@ -38,6 +38,18 @@ function currentDay(dia){
     return dayOfWeek;
 }
 
+function cambioTemperatura(data, dia){
+    var tempDaily = data.daily[dia].temp.day;
+    var dateDaily = data.daily[dia].dt;
+
+    //console.log(tempDaily);
+                
+    var tempCel = temperatureConverter(tempDaily);
+    //console.log(tempCel.toFixed(2));
+
+    document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
+    dia.innerHTML = currentDay(dateDaily);
+}
 
 
 
@@ -47,6 +59,8 @@ window.addEventListener('load', ()=>{
     let long;
     let lat;
     let alerts = 'alerts';
+
+    var diaElegido = 0;
 
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(position => {
@@ -64,23 +78,9 @@ window.addEventListener('load', ()=>{
             .then(data =>{
                 console.log(data);
 
-                var diaElegido = 0;
-
-                selectorDias.addEventListener('change', ()=>{
-                    dia.innerHTML = dias[selectorDias.selectedOptions[0].value];
-                    diaElegido = selectorDias.selectedOptions[0].value;
-                })
-
-                let tempDaily = data.daily[diaElegido].temp.day;
-                let dateDaily = data.daily[diaElegido].dt;
-
-                console.log(tempDaily);
+                cambioTemperatura(data, diaElegido);
                 
-                var tempCel = temperatureConverter(tempDaily);
-                console.log(tempCel.toFixed(2));
-
-                document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
-                dia.innerHTML = currentDay(dateDaily);                
+                selectorDias.addEventListener('change', cambioTemperatura(data, selectorLugar.selectedOptions[0].value ))
             })
             
 
