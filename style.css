@@ -128,7 +128,12 @@
     padding-left: 20px;
 }
 
-@media all and (min-width:300px) and (max-width:500px){
+@media all and (min-width:360px){
+
+    body{
+        width: 360px;
+        height: auto;
+    }
 
     .header{
         width: 640px;
