@@ -73,6 +73,8 @@ window.addEventListener('load', ()=>{
 
                 let tempDaily = data.daily[diaElegido].temp.day;
                 let dateDaily = data.daily[diaElegido].dt;
+                let humed = data.daily[diaElegido].humidity;
+                let preci = data.daily[diaElegido].pop;
 
                 console.log(tempDaily);
                 
@@ -80,7 +82,11 @@ window.addEventListener('load', ()=>{
                 console.log(tempCel.toFixed(2));
 
                 document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
-                dia.innerHTML = currentDay(dateDaily);                
+                dia.innerHTML = currentDay(dateDaily);    
+                
+                document.getElementById('humedad').innerHTML = humed + '%'; 
+
+                document.getElementById('precip').innerHTML = preci*100 + '%';
             })
             
 
