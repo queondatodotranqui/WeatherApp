@@ -128,7 +128,7 @@
     padding-left: 20px;
 }
 
-@media (max-width:400px){
+@media (max-width:360px){
 
     .header{
         width: 640px;
@@ -144,92 +144,12 @@
     
     .izquierda{
         width: 100%;
-        height: 600px;
-        background-color: rgb(255, 255, 255);
-        padding: 100px;
-        display: flex;
-        justify-content: center;
+        border-right: none;
     }
 
     .derecha{
         display: none;
     }
     
-    .izquierda{
-        border-right: 2px solid white;
-        padding: 20px;
-    }
-    
-    .cajaTemperatura{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width:100%;
-        background-color: rgba(228, 228, 228, 0.719);
-        min-width: 250px;
-    }
-    
-    .numero{
-        height: 70%;
-        width: 100%;
-        border: 2px solid white;
-        padding: 20px 20px 10px 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .numero h2{
-        font-size: 3.5em;
-        color: black;
-        text-align: left;
-        width: 100%;
-        display: block;
-    }
-    
-    .numero label{
-        margin-top: 20px;
-        font-size: 1.7;
-    }
-    
-    .info{
-        height: 30%;
-        width: 100%;
-        border: 2px solid white;
-        padding: 10px 20px 20px 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .info h2{
-        width: 100%;
-        color: rgb(150, 150, 150);
-        margin-bottom: 10px;
-    }
-    
-    .selectores{
-        height: 50%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    .selectores select{
-        display: block;
-        width: 100%;
-        height: 60px;
-        font-size: 1.2em;
-    }
-    
-    
-    .footer{
-        height: 50px;
-        width: 100%;
-        background-color: rgb(245, 245, 245);
-        color: rgb(150, 150, 150);
-        line-height: 50px;
-        padding-left: 20px;
-    }
+
 }
