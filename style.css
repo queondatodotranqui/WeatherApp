@@ -128,7 +128,7 @@
     padding-left: 20px;
 }
 
-@media all and (max-width:361px){
+@media all and (min-width:240px) and (max-width:360px){
 
     body{
         width: 360px;
@@ -144,7 +144,7 @@
     }
     
     .logo a{
-        padding-left: 20px;
+        padding-left: 30px;
     }
     
     .izquierda{
