@@ -73,6 +73,7 @@ window.addEventListener('load', ()=>{
                 let humed = data.daily[diaElegido].humidity;
                 let preci = data.daily[diaElegido].pop;
                 let tempDaily = data.daily[diaElegido].temp.day;
+                let weather = data.daily[diaElegido].weather[0];
 
                 dia.innerHTML = currentDay(dateDaily);
 
@@ -93,8 +94,21 @@ window.addEventListener('load', ()=>{
                 document.getElementById('precip').innerHTML = preci*100 + '%';
 
                 var skycons = new Skycons({"color": "black"});
-                skycons.add(document.getElementById("icon1"), Skycons.CLEAR_DAY);
-                skycons.play();
+
+                skycons.addEventListener('load', ()=>{
+                    if(weather.main == 'Clear'){
+                        skycons.add(document.getElementById("icon1"), Skycons.CLEAR_DAY);
+                        skycons.play();
+                    }
+                    if(weather.main == 'Rain'){
+                        skycons.add(document.getElementById('icon1'), Skycons.RAIN);
+                        skycons.play();
+                    }
+                    if(weather.main == 'Clouds'){
+                        skycons.add(document.getElementById('icon1'), Skycons.CLOUDY);
+                        skycons.play();
+                    }
+                })
             })
             
 
