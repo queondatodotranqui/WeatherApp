@@ -89,6 +89,10 @@ window.addEventListener('load', ()=>{
                 document.getElementById('humedad').innerHTML = humed + '%'; 
 
                 document.getElementById('precip').innerHTML = preci*100 + '%';
+
+                var skycons = new Skycons({"color": "black"});
+                skycons.add(document.getElementById("icon1"), Skycons.RAIN);
+                skycons.play();
             })
             
 

@@ -64,15 +64,26 @@
     min-width: 250px;
 }
 
-.numero{
+.cajaTempDiv{
+    display: flex;
     height: 70%;
-    width: 100%;
-    border: 2px solid white;
-    padding: 20px 20px 10px 10px;
+}
+
+.numero{
+    height: 100%;
+    width: 50%;
+    padding: 20px 20px 10px 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
+.iconos{
+    width: 50%;
+    height: 100%;
+    padding: 40px 20px 10px 30px;
+}
+
 
 .numero h2{
     font-size: 3.5em;
@@ -158,6 +169,10 @@
     
     .izquierda{
         border-right: none;
+    }
+
+    .numero h2{
+        font-size: 2.4em;
     }
 
     .derecha{
