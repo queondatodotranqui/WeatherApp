@@ -95,19 +95,19 @@ window.addEventListener('load', ()=>{
 
                 var skycons = new Skycons({"color": "black"});
 
-                cambiarIcono(skycons);
+                cambiarIcono(skycons, weather);
             })
             
-            function cambiarIcono(skycons){
-                if(weather.main == 'Clear'){
+            function cambiarIcono(skycons, tiempo){
+                if(tiempo.main == 'Clear'){
                     skycons.add(document.getElementById("icon1"), Skycons.CLEAR_DAY);
                     skycons.play();
                 }
-                if(weather.main == 'Rain'){
+                if(tiempo.main == 'Rain'){
                     skycons.add(document.getElementById('icon1'), Skycons.RAIN);
                     skycons.play();
                 }
-                if(weather.main == 'Clouds'){
+                if(tiempo.main == 'Clouds'){
                     skycons.add(document.getElementById('icon1'), Skycons.CLOUDY);
                     skycons.play();
                 }
