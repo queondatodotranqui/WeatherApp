@@ -48,6 +48,7 @@ window.addEventListener('load', ()=>{
     let lat;
     let alerts = 'alerts';
 
+    
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude;
@@ -95,6 +96,8 @@ window.addEventListener('load', ()=>{
                 var celcius=valNum-273.15;
                 return celcius;
             }
+
+            
         });
     }
 })

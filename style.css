@@ -128,7 +128,7 @@
     padding-left: 20px;
 }
 
-@media all and (min-width:240px) and (max-width:360px){
+@media all and (min-width:240px) and (max-width:380px){
 
     body{
         width: 360px;
@@ -136,7 +136,7 @@
     }
 
     .header{
-        width: 360px;
+        width: 100%;
     }
     
     .logo{
@@ -147,13 +147,43 @@
         padding-left: 30px;
     }
     
-    .izquierda{
+    .main-content{
+        flex-direction: column-reverse;
+    }
+    
+    .izquierda, .derecha{
         width: 100%;
+        padding: 20px;
+    }
+    
+    .izquierda{
         border-right: none;
     }
 
     .derecha{
-        display: none;
+        height: auto;
+    }
+
+    .selectores label{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .selectores select{
+        display: block;
+        width: 100%;
+        height: 50px;
+        font-size: 1.2em;
+    }
+    
+    
+    .footer{
+        height: 50px;
+        width: 100%;
+        background-color: rgb(245, 245, 245);
+        color: rgb(150, 150, 150);
+        line-height: 50px;
+        padding-left: 20px;
     }
     
 
