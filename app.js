@@ -67,13 +67,15 @@ window.addEventListener('load', ()=>{
 
                 var diaElegido = 0;
 
+                actualizarSelect(data);
+
                 selectorDias.addEventListener('change', ()=>{
                     dia.innerHTML = dias[selectorDias.selectedOptions[0].value];
                     diaElegido = selectorDias.selectedOptions[0].value;
                 })
 
                 let tempDaily = data.daily[diaElegido].temp.day;
-                let dateDaily = data.daily[diaElegido].dt;
+                //let dateDaily = data.daily[diaElegido].dt;
                 let humed = data.daily[diaElegido].humidity;
                 let preci = data.daily[diaElegido].pop;
 
@@ -83,7 +85,6 @@ window.addEventListener('load', ()=>{
                 console.log(tempCel.toFixed(2));
 
                 document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
-                dia.innerHTML = currentDay(dateDaily);    
                 
                 document.getElementById('humedad').innerHTML = humed + '%'; 
 
@@ -97,7 +98,12 @@ window.addEventListener('load', ()=>{
                 return celcius;
             }
 
-            
+            function actualizarSelect(data){
+                var actuaDaily = document.querySelectorAll('.daily');
+                for(let i = 0; i < actuaDaily.length; i++){
+                    actuaDaily[i].innerHTML = currentDay(data.daily[i].dt);
+                }
+            }
         });
     }
 })
