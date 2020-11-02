@@ -70,7 +70,7 @@ window.addEventListener('load', ()=>{
                 actualizarSelect(data);
 
                 selectorDias.addEventListener('change', ()=>{
-                    dia.innerHTML = dias[selectorDias.selectedOptions[0].value];
+                    //dia.innerHTML = dias[selectorDias.selectedOptions[0].value];
                     diaElegido = selectorDias.selectedOptions[0].value;
                 })
 
