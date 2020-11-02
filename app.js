@@ -69,20 +69,22 @@ window.addEventListener('load', ()=>{
 
                 actualizarSelect(data);
 
+                let dateDaily = data.daily[diaElegido].dt;
+                let humed = data.daily[diaElegido].humidity;
+                let preci = data.daily[diaElegido].pop;
+                let tempDaily = data.daily[diaElegido].temp.day;
+
+                dia.innerHTML = currentDay(dateDaily);
+
                 selectorDias.addEventListener('change', ()=>{
-                    //dia.innerHTML = dias[selectorDias.selectedOptions[0].value];
+                    dia.innerHTML = selectorDias.selectedOptions[0].text;
                     diaElegido = selectorDias.selectedOptions[0].value;
                 })
 
-                let tempDaily = data.daily[diaElegido].temp.day;
-                //let dateDaily = data.daily[diaElegido].dt;
-                let humed = data.daily[diaElegido].humidity;
-                let preci = data.daily[diaElegido].pop;
-
-                console.log(tempDaily);
+                //console.log(tempDaily);
                 
                 var tempCel = temperatureConverter(tempDaily);
-                console.log(tempCel.toFixed(2));
+                //console.log(tempCel.toFixed(2));
 
                 document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
                 
@@ -91,7 +93,7 @@ window.addEventListener('load', ()=>{
                 document.getElementById('precip').innerHTML = preci*100 + '%';
 
                 var skycons = new Skycons({"color": "black"});
-                skycons.add(document.getElementById("icon1"), Skycons.RAIN);
+                skycons.add(document.getElementById("icon1"), Skycons.CLEAR_DAY);
                 skycons.play();
             })
             
