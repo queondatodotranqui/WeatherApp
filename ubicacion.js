@@ -1,7 +1,7 @@
 
 window.addEventListener('load', ()=>{
 
-    const myRequest = new Request('https://geolocation-db.com/json/09ba3820-0f88-11eb-9ba6-e1dd7dece2b8')
+    const myRequest = new Request('http://ip-api.com/json/')
 
     fetch(myRequest)
 
