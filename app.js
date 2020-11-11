@@ -124,27 +124,27 @@ window.addEventListener('load', ()=>{
                     skycons.add(document.getElementById("icon1"), Skycons.CLEAR_DAY);
                     skycons.play();
                     if (window.screen.width < 500){
-                        backG.style.backgroundImage = 'url("/imagesWeather/clearMobile.jpg");';
+                        backG.style.backgroundImage = 'url("https://github.com/queondatodotranqui/WeatherApp/blob/main/imagesWeather/clearMobile.jpg");';
                     }else{
-                        backG.style.backgroundImage = 'url("/imagesWeather/clearDesktop.jpg");';
+                        backG.style.backgroundImage = 'url("https://github.com/queondatodotranqui/WeatherApp/blob/main/imagesWeather/clearDesktop.jpg");';
                     }
                 }
                 if(tiempo.main == 'Rain'){
                     skycons.add(document.getElementById('icon1'), Skycons.RAIN);
                     skycons.play();
                     if (window.screen.width < 500){
-                        backG.style.backgroundImage = 'url("/imagesWeather/rainyMobile.jpg")';
+                        backG.style.backgroundImage = 'url("https://github.com/queondatodotranqui/WeatherApp/blob/main/imagesWeather/rainyMobile.jpg")';
                     }else{
-                        backG.style.backgroundImage = 'url("/imagesWeather/rainyDesktop.jpg")';
+                        backG.style.backgroundImage = 'url("https://github.com/queondatodotranqui/WeatherApp/blob/main/imagesWeather/rainyDesktop.jpg")';
                     }
                 }
                 if(tiempo.main == 'Clouds'){
                     skycons.add(document.getElementById('icon1'), Skycons.CLOUDY);
                     skycons.play();
                     if (window.screen.width < 500){
-                        backG.style.backgroundImage = 'url("/imagesWeather/cloudyMobile.jpg")';
+                        backG.style.backgroundImage = 'url("https://github.com/queondatodotranqui/WeatherApp/blob/main/imagesWeather/cloudyMobile.jpg")';
                     }else{
-                        backG.style.backgroundImage = 'url("/imagesWeather/cloudyDesktop.jpg")';
+                        backG.style.backgroundImage = 'url("https://github.com/queondatodotranqui/WeatherApp/blob/main/imagesWeather/cloudyDesktop.jpg")';
                     }
                 }
             }
