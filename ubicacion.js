@@ -5,9 +5,9 @@ window.addEventListener('load', ()=>{
 
     fetch(myRequest)
 
-    .then(response =>{
-        return response.json();
-    })
+    .then(function (response) {
+            return response.json();
+        })
     .then(data=>{
         console.log(data);
         document.getElementById('lugar').innerHTML = data.city;
