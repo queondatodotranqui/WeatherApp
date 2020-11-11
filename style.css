@@ -148,6 +148,9 @@ body{
     margin-bottom: 10px;
 }
 
+.noMostrar{
+    display: none;
+}
 
 .footer{
     height: 50px;
