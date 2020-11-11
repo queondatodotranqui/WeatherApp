@@ -124,27 +124,27 @@ window.addEventListener('load', ()=>{
                     skycons.add(document.getElementById("icon1"), Skycons.CLEAR_DAY);
                     skycons.play();
                     if (window.screen.width < 500){
-                        backG.style.backgroundImage = 'url("/clearMobile.jpg");';
+                        backG.style.backgroundImage = 'url("/imagesWeather/clearMobile.jpg");';
                     }else{
-                        backG.style.backgroundImage = 'url("/clearDesktop.jpg");';
+                        backG.style.backgroundImage = 'url("/imagesWeather/clearDesktop.jpg");';
                     }
                 }
                 if(tiempo.main == 'Rain'){
                     skycons.add(document.getElementById('icon1'), Skycons.RAIN);
                     skycons.play();
                     if (window.screen.width < 500){
-                        backG.style.backgroundImage = 'url("/rainyMobile.jpg")';
+                        backG.style.backgroundImage = 'url("/imagesWeather/rainyMobile.jpg")';
                     }else{
-                        backG.style.backgroundImage = 'url("/rainyDesktop.jpg")';
+                        backG.style.backgroundImage = 'url("/imagesWeather/rainyDesktop.jpg")';
                     }
                 }
                 if(tiempo.main == 'Clouds'){
                     skycons.add(document.getElementById('icon1'), Skycons.CLOUDY);
                     skycons.play();
                     if (window.screen.width < 500){
-                        backG.style.backgroundImage = 'url("/cloudyMobile.jpg")';
+                        backG.style.backgroundImage = 'url("/imagesWeather/cloudyMobile.jpg")';
                     }else{
-                        backG.style.backgroundImage = 'url("/cloudyDesktop.jpg")';
+                        backG.style.backgroundImage = 'url("/imagesWeather/cloudyDesktop.jpg")';
                     }
                 }
             }
