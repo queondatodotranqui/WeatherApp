@@ -55,7 +55,7 @@ window.addEventListener('load', ()=>{
             lat = position.coords.latitude;
 
             const key = '218a3479ecf608d72cb45674511aa25b'
-            const proxy = 'https://cors-anywhere.herokuapp.com/'
+            //const proxy = 'https://cors-anywhere.herokuapp.com/'
             let api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=${alerts}&appid=${key}`;
 
             fetch(api)
@@ -119,7 +119,7 @@ window.addEventListener('load', ()=>{
             })
 
             function cambiarIcono(skycons, tiempo){
-                var backG = document.getElementById('fondo');
+                var backG = document.querySelector('.fondo');
                 if(tiempo.main == 'Clear'){
                     skycons.add(document.getElementById("icon1"), Skycons.CLEAR_DAY);
                     skycons.play();
