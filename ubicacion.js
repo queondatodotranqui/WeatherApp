@@ -9,8 +9,8 @@ window.addEventListener('load', ()=>{
     .then(response =>{
         return response.json();
     })
-    .then(response=>{
-        console.log(response);
-        document.getElementById('lugar').innerHTML = response.city;
+    .then(data=>{
+        console.log(data);
+        document.getElementById('lugar').innerHTML = data.city;
     })
 })
