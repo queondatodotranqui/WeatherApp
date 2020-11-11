@@ -1,7 +1,8 @@
 
 window.addEventListener('load', ()=>{
 
-    const myRequest = new Request('http://ip-api.com/json/')
+    let proxy = 'https://cors-anywhere.herokuapp.com/'
+    const myRequest = new Request(`${proxy}http://ip-api.com/json/`);
 
     fetch(myRequest)
 
