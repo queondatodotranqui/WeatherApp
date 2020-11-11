@@ -15,6 +15,14 @@
     background-size: cover;
 }
 
+.cloudyDesktop{
+    background-image: url(/imagesWeather/cloudyDesktop.jpg);
+}
+
+.cloudyMobile{
+    background-image: url(/imagesWeather/cloudyMobile.jpg);
+}
+
 body{
     width: 100%;
     height: auto;
