@@ -10,6 +10,7 @@ window.addEventListener('load', ()=>{
         return response.json();
     })
     .then(response=>{
+        console.log(response);
         document.getElementById('lugar').innerHTML = response.city;
     })
 })
