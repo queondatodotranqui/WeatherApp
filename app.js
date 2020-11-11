@@ -69,18 +69,13 @@ window.addEventListener('load', ()=>{
 
                 actualizarSelect(data);
 
-                let dateDaily = data.daily[diaElegido].dt;
-                let humed = data.daily[diaElegido].humidity;
-                let preci = data.daily[diaElegido].pop;
-                let tempDaily = data.daily[diaElegido].temp.day;
-                let weather = data.daily[diaElegido].weather[0];
+                var dateDaily = data.daily[diaElegido].dt;
+                var humed = data.daily[diaElegido].humidity;
+                var preci = data.daily[diaElegido].pop;
+                var tempDaily = data.daily[diaElegido].temp.day;
+                var weather = data.daily[diaElegido].weather[0];
 
                 dia.innerHTML = currentDay(dateDaily);
-
-                selectorDias.addEventListener('change', ()=>{
-                    dia.innerHTML = selectorDias.selectedOptions[0].text;
-                    diaElegido = selectorDias.selectedOptions[0].value;
-                })
 
                 //console.log(tempDaily);
                 
@@ -96,7 +91,33 @@ window.addEventListener('load', ()=>{
                 var skycons = new Skycons({"color": "black"});
 
                 cambiarIcono(skycons, weather);
+
+                selectorDias.addEventListener('change', ()=>{
+
+                    dia.innerHTML = selectorDias.selectedOptions[0].text;
+                    diaElegido = selectorDias.selectedOptions[0].value;
+
+                    dateDaily = data.daily[diaElegido].dt;
+                    humed = data.daily[diaElegido].humidity;
+                    preci = data.daily[diaElegido].pop;
+                    tempDaily = data.daily[diaElegido].temp.day;
+                    weather = data.daily[diaElegido].weather[0];
+
+                    tempCel = temperatureConverter(tempDaily);
+                    //console.log(tempCel.toFixed(2));
+    
+                    document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
+                    
+                    document.getElementById('humedad').innerHTML = humed + '%'; 
+    
+                    document.getElementById('precip').innerHTML = preci.toFixed(2)*100 + '%';
+    
+                    skycons = new Skycons({"color": "black"});
+    
+                    cambiarIcono(skycons, weather);
+                })
             })
+
             
             function cambiarIcono(skycons, tiempo){
                 if(tiempo.main == 'Clear'){
