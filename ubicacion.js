@@ -1,7 +1,8 @@
 
 window.addEventListener('load', ()=>{
 
-    const myRequest = new Request('https://geolocation-db.com/json/09ba3820-0f88-11eb-9ba6-e1dd7dece2b8')
+    let proxy = 'https://cors-anywhere.herokuapp.com/'
+    const myRequest = new Request(`${proxy}https://geolocation-db.com/json/09ba3820-0f88-11eb-9ba6-e1dd7dece2b8`)
 
     fetch(myRequest)
 
