@@ -8,65 +8,66 @@
     <title>BeraTiempos</title>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <a href="#"> Weather App </a>
+    <div class="fondo">
+        <div class="header">
+            <div class="logo">
+                <a href="#"> Weather App </a>
+            </div>
         </div>
-    </div>
-    <div class="main-content">
-        <div class="izquierda">
-            <div class="cajaTemperatura">
-                <div class="cajaTempDiv">
-                    <div class="numero">
-                        <label>Temperatura</label> 
-                        <h2 id="numero"></h2>
-                        <label>Humedad</label>
-                        <h2 id="humedad"></h2>
-                        <label>Precipitacion</label>
-                        <h2 id="precip"></h2>
+        <div class="main-content">
+            <div class="izquierda">
+                <div class="cajaTemperatura">
+                    <div class="cajaTempDiv">
+                        <div class="numero">
+                            <label>Temperatura</label> 
+                            <h2 id="numero"></h2>
+                            <label>Humedad</label>
+                            <h2 id="humedad"></h2>
+                            <label>Precipitacion</label>
+                            <h2 id="precip"></h2>
+                        </div>
+                        <div class="iconos">
+                            <canvas id="icon1" width="100" height="100"></canvas>
+                        </div>
                     </div>
-                    <div class="iconos">
-                        <canvas id="icon1" width="100" height="100"></canvas>
-                    </div>
-                </div>
-                
-                <div class="info">
-                    <div class="lugar">
-                        <h2 id="lugar"> Mar del Plata </h2>
-                    </div>
-                    <div class="dia">
-                        <h2 id="dia"></h2>
+                    
+                    <div class="info">
+                        <div class="lugar">
+                            <h2 id="lugar"> Mar del Plata </h2>
+                        </div>
+                        <div class="dia">
+                            <h2 id="dia"></h2>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="derecha">
-            <div class="selectores">
-                <label> Dia </label>
-                <select id="dias">  
-                    <option selected> Seleccione un dia...</option>
-                    <option class="daily" value="0"> </option>
-                    <option class="daily" value="1"> </option>
-                    <option class="daily" value="2"> </option>
-                    <option class="daily" value="3"> </option>
-                    <option class="daily" value="4"> </option>
-                    <option class="daily" value="5"> </option>
-                    <option class="daily" value="6"> </option>
-                </select>
-                <div class="noMostrar">
-                    <label> Lugar </label>
-                    <select id="lugares">
-                        <option value="0" selected> Mar del Plata </option>
-                        <option value="1"> CABA</option>
-                        <option value="2"> Corrientes</option>
-                        <option value="3"> Bariloche</option>
+            <div class="derecha">
+                <div class="selectores">
+                    <label> Dia </label>
+                    <select id="dias">  
+                        <option selected> Seleccione un dia...</option>
+                        <option class="daily" value="0"> </option>
+                        <option class="daily" value="1"> </option>
+                        <option class="daily" value="2"> </option>
+                        <option class="daily" value="3"> </option>
+                        <option class="daily" value="4"> </option>
+                        <option class="daily" value="5"> </option>
+                        <option class="daily" value="6"> </option>
                     </select>
+                    <div class="noMostrar">
+                        <label> Lugar </label>
+                        <select id="lugares">
+                            <option value="0" selected> Mar del Plata </option>
+                            <option value="1"> CABA</option>
+                            <option value="2"> Corrientes</option>
+                            <option value="3"> Bariloche</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="footer"> @ Derechos Reservados. BeraTiempos</div>
     </div>
-    <div class="footer"> @ Derechos Reservados. BeraTiempos</div>
-
     <script type="text/javascript" src="ubicacion.js"></script>
     <script type="text/javascript" src="skycons.js"></script>
     <script type="text/javascript" src="app.js"></script>

@@ -57,7 +57,7 @@ window.addEventListener('load', ()=>{
             const key = '218a3479ecf608d72cb45674511aa25b'
             const proxy = 'https://cors-anywhere.herokuapp.com/'
             let api = `${proxy}api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=${alerts}&appid=${key}`;
-            
+
             fetch(api)
             .then(response =>{
                 return response.json();
@@ -119,17 +119,33 @@ window.addEventListener('load', ()=>{
             })
 
             function cambiarIcono(skycons, tiempo){
+                var backG = document.getElementById('fondo');
                 if(tiempo.main == 'Clear'){
                     skycons.add(document.getElementById("icon1"), Skycons.CLEAR_DAY);
                     skycons.play();
+                    if (window.screen.width < 500){
+                        backG.style.backgroundImage = 'url(/imagesWeather/clearMobile.jpg)';
+                    }else{
+                        backG.style.backgroundImage = 'url(/imagesWeather/clearDesktop.jpg)';
+                    }
                 }
                 if(tiempo.main == 'Rain'){
                     skycons.add(document.getElementById('icon1'), Skycons.RAIN);
                     skycons.play();
+                    if (window.screen.width < 500){
+                        backG.style.backgroundImage = 'url(/imagesWeather/rainyMobile.jpg)';
+                    }else{
+                        backG.style.backgroundImage = 'url(/imagesWeather/rainyDesktop.jpg)';
+                    }
                 }
                 if(tiempo.main == 'Clouds'){
                     skycons.add(document.getElementById('icon1'), Skycons.CLOUDY);
                     skycons.play();
+                    if (window.screen.width < 500){
+                        backG.style.backgroundImage = 'url(/imagesWeather/cloudyMobile.jpg)';
+                    }else{
+                        backG.style.backgroundImage = 'url(/imagesWeather/cloudyDesktop.jpg)';
+                    }
                 }
             }
 
