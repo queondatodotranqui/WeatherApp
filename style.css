@@ -12,17 +12,17 @@
 }
 
 .cloudy{
-    background-image: url(/imagesWeather/cloudyMobile.JPG);
+    background-image: url(/imagesWeather/cloudyMobile.jpg);
     background-size: cover;
 }
 
 .clear{
-    background-image: url(/imagesWeather/clearMobile.JPG);
+    background-image: url(/imagesWeather/clearMobile.jpg);
     background-size: cover;
 }
 
 .rainy{
-    background-image: url(/imagesWeather/rainyMobile.JPG);
+    background-image: url(/imagesWeather/rainyMobile.jpg);
     background-size: cover;
 }
 
@@ -180,15 +180,15 @@ body{
 @media all and (min-width:600px){
 
     .cloudy{
-        background-image: url(/imagesWeather/cloudyDesktop.JPG);
+        background-image: url(/imagesWeather/cloudyDesktop.jpg);
     }
     
     .clear{
-        background-image: url(/imagesWeather/clearDesktop.JPG);
+        background-image: url(/imagesWeather/clearDesktop.jpg);
     }
     
     .rainy{
-        background-image: url(/imagesWeather/rainyDesktop.JPG);
+        background-image: url(/imagesWeather/rainyDesktop.jpg);
     }
 
     .selectores select{
