@@ -17,7 +17,7 @@
 }
 
 .clear{
-    background-image: url(/imagesWeather/clearMobile.jpg);
+    background-image: url('https://github.com/queondatodotranqui/WeatherApp/blob/main/imagesWeather/clearMobile.jpg');
     background-size: cover;
 }
 
