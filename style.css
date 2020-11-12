@@ -11,7 +11,18 @@
     display: none;
 }
 
-.fondo{
+.cloudy{
+    background-image: url(/imagesWeather/cloudyMobile.jpg);
+    background-size: cover;
+}
+
+.clear{
+    background-image: url(/imagesWeather/clearMobile.jpg);
+    background-size: cover;
+}
+
+.rainy{
+    background-image: url(/imagesWeather/rainyMobile.jpg);
     background-size: cover;
 }
 
@@ -23,6 +34,7 @@ body{
 .header{
     height: 80px;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.281);
 }
 
 .logo{
@@ -150,6 +162,7 @@ body{
 .selectores label{
     margin-top: 20px;
     margin-bottom: 10px;
+    font-size: 2em;
 }
 
 .noMostrar{
@@ -162,4 +175,28 @@ body{
     color: rgb(56, 56, 56);
     line-height: 50px;
     padding-left: 20px;
+}
+
+@media all and (min-width:600px){
+
+    .cloudy{
+        background-image: url(/imagesWeather/cloudyDesktop.jpg);
+    }
+    
+    .clear{
+        background-image: url(/imagesWeather/clearDesktop.jpg);
+    }
+    
+    .rainy{
+        background-image: url(/imagesWeather/rainyDesktop.jpg);
+    }
+
+    .selectores select{
+        color: black;
+        background-color: rgba(255, 255, 255, 0.445);
+    }
+
+    .selectores label{
+        background-color: rgba(255, 255, 255, 0.199);
+    }
 }
