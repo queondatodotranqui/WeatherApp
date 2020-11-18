@@ -1,8 +1,8 @@
 # WeatherApp
-Aplicacion web del clima
+Basic Weather Application.
 
-Una aplicacion del clima a la que se le puede consultar la temperatura de varias ciudades en un rango de 7 dias. Al llegar a cierto clima los fondos cambian, asi tambien como los iconos.
+The app provides a forecast within a range of seven days. As the weather changes, so do the backgrounds and icons do!
 
-Los iconos son de <a href="https://github.com/darkskyapp/skycons">Darkskyapp</a>.
+The icons are from <a href="https://github.com/darkskyapp/skycons">Darkskyapp</a>.
 
-Actualmente solo version mobile.
+Nowadays is only mobile friendly.
