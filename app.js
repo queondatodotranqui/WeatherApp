@@ -84,9 +84,12 @@ window.addEventListener('load', ()=>{
                 var sensCel = temperatureConverter(feelslike);
                 //console.log(tempCel.toFixed(2));
 
-                var hora = new Date(dateDaily);
+                var diaActual = Date.now();
+                var hora = new Date(diaActual);
+                //var fechaActual = Date.now();
                 
-                console.log(hora.getHours());
+                console.log(hora.getMonth());
+
 
                 document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
                 
@@ -110,8 +113,10 @@ window.addEventListener('load', ()=>{
                     preci = data.daily[diaElegido].pop;
                     tempDaily = data.daily[diaElegido].temp.day;
                     weather = data.daily[diaElegido].weather[0];
+                    feelslike = data.daily[diaElegido].feels_like.day;
 
                     tempCel = temperatureConverter(tempDaily);
+                    sensCel = temperatureConverter(feelslike);
                     //console.log(tempCel.toFixed(2));
     
                     document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
@@ -119,6 +124,8 @@ window.addEventListener('load', ()=>{
                     document.getElementById('humedad').innerHTML = humed + '%'; 
     
                     document.getElementById('precip').innerHTML = preci.toFixed(2)*100 + '%';
+
+                    document.getElementById('sensacion').innerHTML = sensCel.toFixed(1) + '°C';
     
                     skycons = new Skycons({"color": "black"});
     
