@@ -74,19 +74,27 @@ window.addEventListener('load', ()=>{
                 var preci = data.daily[diaElegido].pop;
                 var tempDaily = data.daily[diaElegido].temp.day;
                 var weather = data.daily[diaElegido].weather[0];
+                var feelslike = data.daily[diaElegido].feels_like.day;
 
                 dia.innerHTML = currentDay(dateDaily);
 
                 //console.log(tempDaily);
                 
                 var tempCel = temperatureConverter(tempDaily);
+                var sensCel = temperatureConverter(feelslike);
                 //console.log(tempCel.toFixed(2));
+
+                var hora = new Date(dateDaily);
+                
+                console.log(hora.getHours());
 
                 document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
                 
                 document.getElementById('humedad').innerHTML = humed + '%'; 
 
                 document.getElementById('precip').innerHTML = preci*100 + '%';
+
+                document.getElementById('sensacion').innerHTML = sensCel.toFixed(1) + '°C';
 
                 var skycons = new Skycons({"color": "black"});
 
