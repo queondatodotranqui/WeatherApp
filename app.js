@@ -89,6 +89,7 @@ window.addEventListener('load', ()=>{
                 //var fechaActual = Date.now();
                 
                 console.log(hora.getMonth());
+                console.log('hola');
 
 
                 document.getElementById('numero').innerHTML = tempCel.toFixed(1) + '°C';
