@@ -122,7 +122,7 @@ body{
     height: 30%;
     width: 100%;
     margin-top: 4px;
-    padding: 10px 20px 20px 10px;
+    padding: 10px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -132,6 +132,7 @@ body{
 .info h2{
     width: 100%;
     color: rgb(27, 27, 27);
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
